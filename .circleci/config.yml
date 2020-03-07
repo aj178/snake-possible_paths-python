@@ -8,8 +8,6 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - run: virtualenv -p python3 venv
-      - run: source venv/bin/activate
       - run: pip install pybuilder --pre pybuilder
       - run: pyb clean
       - run: pyb -v
