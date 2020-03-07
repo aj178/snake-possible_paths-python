@@ -1,0 +1,14 @@
+#!/usr/bin/venv python3
+from lib.Snakeproblem import *
+import sys
+
+if __name__ == '__main__':
+    if len(sys.argv) < 4:
+        raise Exception("Please Provide the grid size and snake length as user input. Usage: Snake grid_row "
+                        "grid_column snake_lengthn")
+    snakeobj = SnakeProblem(sys.argv[3])
+    paths = snakeobj.possible_paths(sys.argv[1], sys.argv[2])
+    if type(paths) == int:
+        print("{}X{} grid (snake length {}) has {} paths".format(sys.argv[1], sys.argv[2], sys.argv[3], paths))
+    else:
+        print(paths)
