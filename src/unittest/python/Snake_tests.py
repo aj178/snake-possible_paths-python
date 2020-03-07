@@ -39,6 +39,11 @@ class test_paths_of_snake(unittest.TestCase):
         paths = snake_test.possible_paths(2, 2)
         self.assertEqual(paths, "Snake length can't be a character or floating point number.")
 
+    def test_fail(self):
+        snake_test = SnakeProblem(4)
+        paths = snake_test.possible_paths("2", "2")
+        self.assertEqual(paths, 6)
+
 
 if __name__ == '__main__':
     unittest.main()
