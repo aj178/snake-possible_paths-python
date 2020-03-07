@@ -13,8 +13,7 @@ jobs:
       - run: pip install pybuilder --pre pybuilder
       - run: pyb clean
       - run: pyb -v
-      - run: pip install ~/project/target/dist/snake-1.0.dev0/dist/snake-1.0.dev0.tar.gz 
-      - run: python ~/src/unittest/python/bakery_tests.py
+
 
 workflows:
   main:
